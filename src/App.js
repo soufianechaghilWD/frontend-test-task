@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./pages/login";
+import Dashboard from './pages/dashboard'
+import logInContext from "./context/logInContext";
+import moviesContext from "./context/moviesContext";
+import { useState } from "react";
 
 function App() {
+
+  const [logIn, setLogIn] = useState(null)
+  const [movies, setMovies] = useState([])
+
+  const logInValue = {logIn, setLogIn}
+  const moviesValue = {movies, setMovies}
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <logInContext.Provider value={logInValue} >
+        <moviesContext.Provider value={moviesValue} >
+          <div className="App">
+            <Routes>
+              <Route path="/login" element={<Login />} />
+              <Route path="/" element={<Dashboard />} />
+            </Routes>
+          </div>
+        </moviesContext.Provider>
+      </logInContext.Provider>
+    </BrowserRouter>
   );
 }
 

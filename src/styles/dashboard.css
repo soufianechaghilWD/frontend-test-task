@@ -1,0 +1,96 @@
+.dash__header{
+    margin: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.dash__header__header{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.dash__header > div > h1{
+    background: #071C44;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-right: 10%;
+    width: fit-content;
+    margin-left: 200px;
+}
+.dash__header > button{
+    width: fit-content;
+    height: fit-content;
+    padding: 0.8rem 2rem;
+    background: red;
+    color:  white;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.secondary__header > p{
+    text-align: center;
+    margin: 1rem 0;
+}
+.secondary__header > h2{
+    display: block;
+    margin: 1rem auto;
+    background: #086FB9;
+    width: fit-content;
+    padding: 8px 4rem;
+    border: none;
+    border-radius: 15px;
+    color: white;
+}
+.titles{
+    margin: 1rem 2.5rem;
+    display: flex;
+    background: #1D8F9E;
+    justify-content: space-between;
+    color: white;
+    padding: 1rem;
+    border-radius: 20px;
+}
+.movie{
+    margin: 1rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 20px;
+}
+.titles > p, .movie > p, .movie > button{
+    text-align: center;
+    flex: 1;
+}
+.movie > button{
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+.dash__add > h2{
+    color: white;
+    background: #024242;
+    padding: .5rem 2rem;
+    width: fit-content;
+    border-radius: 25px;
+    display: block;
+    margin: 3rem auto 1rem;
+}
+.dash__add > form{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+.dash__add > form > input{
+    padding: 0.4rem 0.7rem;
+}
+.dash__add > form >  button{
+    background: #170739;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 0.3rem 1rem;
+}
